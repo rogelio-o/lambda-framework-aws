@@ -42,6 +42,6 @@
   "dependencies": {
     "@types/aws-lambda": "0.0.21",
     "aws-sdk": "^2.161.0",
-    "lambda-framework": "^1.0.17"
+    "lambda-framework": "^1.0.18"
   }
 }
