@@ -29,7 +29,7 @@
          * Common Bugs and Correctness. The following rules should be turned on because they find
          * common bug patterns in the code or enforce type safety.
          */
-        "chai-vague-errors": true,
+        "chai-vague-errors": false,
         "forin": true,
         "jquery-deferred-must-complete": true,
         "label-position": true,

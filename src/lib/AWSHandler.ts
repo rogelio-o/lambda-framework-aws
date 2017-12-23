@@ -1,14 +1,25 @@
 import { Callback, Context } from "aws-lambda";
 import { IApp, IRawCallback, IRawEvent } from "lambda-framework";
-import AWSTransformer from "./AWSTranformer";
+import AWSTransformer from "./AWSTransformer";
 
-const AWSHandler = (app: IApp) => {
-  return (event: any, context: Context, callback: Callback): void => {
-    rawEvent: IRawEvent = AWSTransformer.rawEvent(event);
-    rawCallback: IRawCallback = AWSTransformer.rawCallback(callback);
+/**
+ * The class that implements the AWS handler.
+ */
+export default class AWSHandler {
 
-    app.handle(rawEvent, rawCallback);
-  };
+  private _app: IApp;
+  private _transformer: AWSTransformer;
+
+  constructor(app: IApp) {
+    this._app = app;
+    this._transformer = new AWSTransformer();
+  }
+
+  public handle(event: any, context: Context, callback: Callback): void {
+    const rawEvent: IRawEvent = this._transformer.transformRawEvent(event);
+    const rawCallback: IRawCallback = this._transformer.transformRawCallback(callback);
+
+    this._app.handle(rawEvent, rawCallback);
+  }
+
 }
-
-export default AWSHandler;
