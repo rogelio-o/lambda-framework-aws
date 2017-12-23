@@ -6,7 +6,36 @@ AWS Lambda implementation of Lambda Framework.
 
 ## How to use it?
 
-TODO
+### Creating the AWS Lambda handler
+
+```typescript
+import { App, IApp } from "lambda-framework";
+import { AWSHandler } from "lambda-framework-aws";
+
+const app: IApp = new App();
+...
+export.handler = AWSHandler(app);
+```
+
+### Using S3 to retrieve the templates
+
+```typescript
+import { App, IApp } from "lambda-framework";
+import { AWSHandler, S3TemplateLoader } from "lambda-framework-aws";
+import DustTemplateRenderer from "lambda-framework-dustjs";
+
+const app: IApp = new App();
+...
+const cachedTime: number = 3000;
+const templateRenderer: ITemplateRenderer = new DustTemplateRenderer(new S3TemplateLoader("bucket-name", cachedTime));
+app.addTemplateEngine(templateRenderer);
+...
+```
+
+### More info
+
+If you want to know more about how to use App, please visit
+the [Core Project](https://github.com/rogelio-o/lambda-framework).
 
 ## Lambda Framework projects
 

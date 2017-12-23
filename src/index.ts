@@ -4,6 +4,6 @@
  * MIT Licensed
  */
 
-export { default } from "./lib/AWSHandler";
+export { default as AWSHandler } from "./lib/AWSHandler";
 export { default as AWSTransformer } from "./lib/AWSTransformer";
 export { default as S3TemplateLoader } from "./lib/S3TemplateLoader";
