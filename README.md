@@ -42,7 +42,8 @@ the [Core Project](https://github.com/rogelio-o/lambda-framework).
 
 - [Core](https://github.com/rogelio-o/lambda-framework)
 - [AWS Lambda implementation](https://github.com/rogelio-o/lambda-framework-aws)
-- [DustJS template engine implementation for Lambda Framework](https://github.com/rogelio-o/lambda-framework-dustjs)
+- [Google Cloud Functions implementation](https://github.com/rogelio-o/lambda-framework-gcloud)
+- [DustJS template engine implementation](https://github.com/rogelio-o/lambda-framework-dustjs)
 - [Website](https://github.com/rogelio-o/lambda-framework-website)
 - [Website Resources](https://github.com/rogelio-o/lambda-framework-website-resources)
 
