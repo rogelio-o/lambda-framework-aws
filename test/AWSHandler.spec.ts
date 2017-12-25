@@ -1,7 +1,7 @@
 /* tslint:disable:no-unused-expression */
 import { APIGatewayEvent, Callback, Context } from "aws-lambda";
 import * as Chai from "chai";
-import lambdaFramework, { IApp, RawEvent } from "lambda-framework";
+import { App, IApp, RawEvent } from "lambda-framework";
 import { SinonStub, stub } from "sinon";
 import AWSHandler from "./../src/lib/AWSHandler";
 import AWSRawCallback from "./../src/lib/AWSRawCallback";
@@ -14,7 +14,7 @@ describe("AWSHandler", () => {
   const event: APIGatewayEvent = aPIGatewayEvent;
   const context: Context = null;
   const callback: Callback = null;
-  const app: IApp = new lambdaFramework();
+  const app: IApp = new App();
   const appHandle: SinonStub = stub(app, "handle");
   const handler: AWSHandler = new AWSHandler(app);
 
