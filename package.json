@@ -28,6 +28,7 @@
   "author": "Rogelio Orts",
   "license": "MIT",
   "devDependencies": {
+    "@types/aws-lambda": "0.0.24",
     "@types/chai": "^4.0.4",
     "@types/mocha": "^2.2.43",
     "@types/node": "^8.0.28",
@@ -43,7 +44,6 @@
     "typescript": "^2.5.2"
   },
   "dependencies": {
-    "@types/aws-lambda": "0.0.21",
     "aws-sdk": "^2.161.0",
     "lambda-framework": "^1.0.20",
     "node-cache": "^4.1.1"
