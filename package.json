@@ -13,7 +13,7 @@
     "precompile": "npm run clean",
     "pretest": "npm run compile",
     "test": "nyc --reporter=html --reporter=text mocha --recursive dist/test/",
-    "posttest": "npm run lint && nyc check-coverage --statements 70 --branches 70 --functions 70 --lines 70",
+    "posttest": "npm run lint && nyc check-coverage --statements 90 --branches 90 --functions 90 --lines 90",
     "compile": "tsc",
     "lint": "tslint --config tslint.json --project tsconfig.json",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
@@ -45,7 +45,7 @@
   "dependencies": {
     "@types/aws-lambda": "0.0.21",
     "aws-sdk": "^2.161.0",
-    "lambda-framework": "^1.0.19"
+    "lambda-framework": "^1.0.20"
   },
   "nyc": {
     "exclude": [
