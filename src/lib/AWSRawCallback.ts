@@ -20,4 +20,8 @@ export default class AWSRawCallback implements IRawCallback {
     this.callback(null, {statusCode, headers, body});
   }
 
+  public finalize(err?: Error): void {
+    this.callback(err);
+  }
+
 }
