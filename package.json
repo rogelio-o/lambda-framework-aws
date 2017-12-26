@@ -41,7 +41,8 @@
     "sinon": "^4.0.2",
     "tslint": "^5.7.0",
     "tslint-microsoft-contrib": "^5.0.1",
-    "typescript": "^2.5.2"
+    "typescript": "^2.5.2",
+    "npm-auto-version": "^1.0.0"
   },
   "dependencies": {
     "aws-sdk": "^2.161.0",
