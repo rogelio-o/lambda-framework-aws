@@ -1,6 +1,6 @@
 # AWS Lambda implementation
 
-[![Coverage Status](https://coveralls.io/repos/github/rogelio-o/lambda-framework-aws/badge.svg?branch=master)](https://coveralls.io/github/rogelio-o/lambda-framework-aws?branch=master) [![Build Status](https://travis-ci.org/rogelio-o/lambda-framework-aws.svg?branch=master)](https://travis-ci.org/rogelio-o/lambda-framework-aws)
+[![Coverage Status](https://coveralls.io/repos/github/rogelio-o/lambda-framework-aws/badge.svg?branch=master)](https://coveralls.io/github/rogelio-o/lambda-framework-aws?branch=master) [![Build Status](https://travis-ci.org/rogelio-o/lambda-framework-aws.svg?branch=master)](https://travis-ci.org/rogelio-o/lambda-framework-aws) [![npm version](https://badge.fury.io/js/lambda-framework-aws.svg)](https://badge.fury.io/js/lambda-framework-aws)
 
 AWS Lambda implementation of Lambda Framework.
 
