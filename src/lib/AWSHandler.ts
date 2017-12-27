@@ -1,4 +1,3 @@
-import { Callback, Context } from "aws-lambda";
 import { IApp, IRawCallback, IRawEvent } from "lambda-framework";
 import AWSTransformer from "./AWSTransformer";
 
