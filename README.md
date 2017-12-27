@@ -15,7 +15,8 @@ import { AWSHandler } from "lambda-framework-aws";
 const app: IApp = new App();
 ...
 const handler: AWSHandler = new AWSHandler(app);
-export.handler = handler.handle;
+const handle = handler.handle;
+export { handle };
 ```
 
 ### Using S3 to retrieve the templates
