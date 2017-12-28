@@ -9,14 +9,13 @@ AWS Lambda implementation of Lambda Framework.
 ### Creating the AWS Lambda handler
 
 ```typescript
-import { App, IApp } from "lambda-framework";
+import { App, IApp, ITemplateRenderer } from "lambda-framework";
 import { AWSHandler } from "lambda-framework-aws";
 
 const app: IApp = new App();
 ...
 const handler: AWSHandler = new AWSHandler(app);
-const handle = handler.handle;
-export { handle };
+export const handle = handler.handle.bind(handler);
 ```
 
 ### Using S3 to retrieve the templates
@@ -24,7 +23,7 @@ export { handle };
 ```typescript
 import { App, IApp } from "lambda-framework";
 import { AWSHandler, S3TemplateLoader } from "lambda-framework-aws";
-import DustTemplateRenderer from "lambda-framework-dustjs";
+import { DustTemplateRenderer } from "lambda-framework-dustjs";
 
 const app: IApp = new App();
 ...
