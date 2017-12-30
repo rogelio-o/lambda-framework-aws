@@ -1,6 +1,6 @@
 # AWS Lambda implementation
 
-[![Coverage Status](https://coveralls.io/repos/github/rogelio-o/lambda-framework-aws/badge.svg?branch=master)](https://coveralls.io/github/rogelio-o/lambda-framework-aws?branch=master) [![Build Status](https://travis-ci.org/rogelio-o/lambda-framework-aws.svg?branch=master)](https://travis-ci.org/rogelio-o/lambda-framework-aws)
+[![Coverage Status](https://coveralls.io/repos/github/rogelio-o/lambda-framework-aws/badge.svg?branch=master)](https://coveralls.io/github/rogelio-o/lambda-framework-aws?branch=master) [![Build Status](https://travis-ci.org/rogelio-o/lambda-framework-aws.svg?branch=master)](https://travis-ci.org/rogelio-o/lambda-framework-aws) [![npm version](https://badge.fury.io/js/lambda-framework-aws.svg)](https://badge.fury.io/js/lambda-framework-aws)
 
 AWS Lambda implementation of Lambda Framework.
 
@@ -9,12 +9,13 @@ AWS Lambda implementation of Lambda Framework.
 ### Creating the AWS Lambda handler
 
 ```typescript
-import { App, IApp } from "lambda-framework";
+import { App, IApp, ITemplateRenderer } from "lambda-framework";
 import { AWSHandler } from "lambda-framework-aws";
 
 const app: IApp = new App();
 ...
-export.handler = AWSHandler(app);
+const handler: AWSHandler = new AWSHandler(app);
+export const handle = handler.handle.bind(handler);
 ```
 
 ### Using S3 to retrieve the templates
@@ -22,7 +23,7 @@ export.handler = AWSHandler(app);
 ```typescript
 import { App, IApp } from "lambda-framework";
 import { AWSHandler, S3TemplateLoader } from "lambda-framework-aws";
-import DustTemplateRenderer from "lambda-framework-dustjs";
+import { DustTemplateRenderer } from "lambda-framework-dustjs";
 
 const app: IApp = new App();
 ...
@@ -41,9 +42,11 @@ the [Core Project](https://github.com/rogelio-o/lambda-framework).
 
 - [Core](https://github.com/rogelio-o/lambda-framework)
 - [AWS Lambda implementation](https://github.com/rogelio-o/lambda-framework-aws)
-- [DustJS template engine implementation for Lambda Framework](https://github.com/rogelio-o/lambda-framework-dustjs)
+- [Google Cloud Functions implementation](https://github.com/rogelio-o/lambda-framework-gcloud)
+- [DustJS template engine implementation](https://github.com/rogelio-o/lambda-framework-dustjs)
 - [Website](https://github.com/rogelio-o/lambda-framework-website)
 - [Website Resources](https://github.com/rogelio-o/lambda-framework-website-resources)
+- [Examples](https://github.com/rogelio-o/lambda-framework-examples)
 
 ## Contributions
 

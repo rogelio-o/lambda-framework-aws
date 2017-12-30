@@ -1,6 +1,6 @@
 {
   "name": "lambda-framework-aws",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "AWS Lambda implementation of Lambda Framework",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
@@ -30,7 +30,6 @@
   "devDependencies": {
     "@types/chai": "^4.0.4",
     "@types/mocha": "^2.2.43",
-    "@types/node": "^8.0.28",
     "@types/sinon": "^2.3.7",
     "chai": "^4.1.2",
     "coveralls": "^3.0.0",
@@ -40,12 +39,15 @@
     "sinon": "^4.0.2",
     "tslint": "^5.7.0",
     "tslint-microsoft-contrib": "^5.0.1",
-    "typescript": "^2.5.2"
+    "typescript": "^2.5.2",
+    "npm-auto-version": "^1.0.0"
   },
   "dependencies": {
-    "@types/aws-lambda": "0.0.21",
+    "@types/aws-lambda": "0.0.24",
+    "@types/node": "^8.0.28",
     "aws-sdk": "^2.161.0",
-    "lambda-framework": "^1.0.20"
+    "lambda-framework": "^1.1.1",
+    "node-cache": "^4.1.1"
   },
   "nyc": {
     "exclude": [

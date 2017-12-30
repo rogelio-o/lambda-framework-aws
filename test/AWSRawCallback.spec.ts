@@ -41,4 +41,16 @@ describe("AWSRawCallback", () => {
 
   });
 
+  describe("#finalize", () => {
+
+    it("calls the original `callback` function with the given error.", () => {
+      const err: Error = new Error("Test.");
+
+      rawCallback.finalize(err);
+
+      Chai.expect(callback.args[0][0]).to.be.equal(err);
+    });
+
+  });
+
 });

@@ -1,4 +1,3 @@
-import { Callback, Context } from "aws-lambda";
 import { IApp, IRawCallback, IRawEvent } from "lambda-framework";
 import AWSTransformer from "./AWSTransformer";
 
@@ -15,7 +14,7 @@ export default class AWSHandler {
     this._transformer = new AWSTransformer();
   }
 
-  public handle(event: any, context: Context, callback: Callback): void {
+  public handle(event: any, context: any, callback: any): void {
     const rawEvent: IRawEvent = this._transformer.transformRawEvent(event);
     const rawCallback: IRawCallback = this._transformer.transformRawCallback(callback);
 
